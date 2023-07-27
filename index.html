@@ -102,11 +102,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 window.addEventListener('load', function() {
   document.getElementById("music").play();
-});</script><tw-passagedata pid="1" name="开始" tags="" position="400,450" size="100,100">&lt;&lt;cacheaudio &quot;bgm-1&quot; &quot;music/bgm/Far Out - Another World (Intro) .mp3&quot;&gt;&gt;
-&lt;&lt;run Dialog.setup(&quot;注意&quot;)&gt;&gt;
-&lt;&lt;run Dialog.wiki(&quot;建议使用chrome，E-dge等浏览器打开此网页&quot;)&gt;&gt;
-&lt;&lt;run Dialog.open()&gt;&gt;
-你好
+});</script><tw-passagedata pid="1" name="开始" tags="" position="400,450" size="100,100">&lt;&lt;cacheaudio &quot;bgm-1&quot; &quot;music/bgm/Far Out - Another World (Intro) .mp3&quot;&gt;&gt;&lt;&lt;run Dialog.setup(&quot;注意&quot;)&gt;&gt;&lt;&lt;run Dialog.wiki(&quot;建议使用chrome，E-dge等浏览器打开此网页&quot;)&gt;&gt;&lt;&lt;run Dialog.open()&gt;&gt;你好
 欢迎游玩本游戏
 您可以通过您的选择改变游戏进程
 祝您玩的开心
@@ -149,31 +145,17 @@ oh
 [[我选错了|调查]]
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="假动作" tags="" position="400,900" size="100,100">&lt;&lt;if $name==&quot;Promir&quot; or $name==&quot;Hermenfi&quot;&gt;&gt;
-&lt;&lt;if $name==&quot;Promir&quot;&gt;&gt;
-Promir
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="假动作" tags="" position="400,900" size="100,100">&lt;&lt;if $name==&quot;Promir&quot; or $name==&quot;Hermenfi&quot;&gt;&gt;&lt;&lt;if $name==&quot;Promir&quot;&gt;&gt;Promir
 &lt;&lt;timed 1s&gt;&gt;这是个男生的名字
 &lt;&lt;timed 1s&gt;&gt;如果您是女生的话我建议您换一个名称以免后续剧情出现歧义
 &lt;&lt;timed 1s&gt;&gt;
 [[开始吧|游戏][$gender=&quot;boy&quot;]]
-[[我会换一个名称|调查]]
-&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $name==&quot;Hermenfi&quot;&gt;&gt;
-Hermenfi
+[[我会换一个名称|调查]]&lt;&lt;/timed&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $name==&quot;Hermenfi&quot;&gt;&gt;Hermenfi
 &lt;&lt;timed 1s&gt;&gt;这是个女生的名字
 &lt;&lt;timed 1s&gt;&gt;如果您是男生的话我建议您换一个名称以免后续剧情出现歧义
 &lt;&lt;timed 1s&gt;&gt;
 [[开始吧|游戏][$gender=&quot;girl&quot;]]
-[[我会换一个名称|调查]]
-&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;&lt;timed 1s&gt;&gt;.
+[[我会换一个名称|调查]]&lt;&lt;/timed&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;timed 1s&gt;&gt;.
 &lt;&lt;timed 1s&gt;&gt;.
 &lt;&lt;timed 1s&gt;&gt;.
 &lt;&lt;timed 2s&gt;&gt;很抱歉
@@ -196,8 +178,7 @@ Hermenfi
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="游戏" tags="" position="400,1050" size="100,100">&lt;&lt;audio &quot;bgm-1&quot; loop play&gt;&gt;
-&lt;h1 style=&quot;text-align:center&quot;&gt;0-0-1:出发（引导）&lt;/h1&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="游戏" tags="" position="400,1050" size="100,100">&lt;&lt;audio &quot;bgm-1&quot; volume 0.4 loop play&gt;&gt;&lt;h1 style=&quot;text-align:center&quot;&gt;0-0-1:出发（引导）&lt;/h1&gt;
 &lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;img/Photo album/GIF/等待.gif&quot; alt=&quot;图片加载失败&quot; width=&quot;400px&quot;&gt;&lt;/p&gt;
 &lt;&lt;timed 1.5s&gt;&gt;[你拿起了一瓶花]
 &lt;&lt;timed 1.5s&gt;&gt;嗯，真是无聊。
