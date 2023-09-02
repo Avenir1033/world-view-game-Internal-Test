@@ -241,13 +241,14 @@ window.addEventListener('load', function() {
   &lt;br/&gt;
   [[真正的开始|游戏]]
  &lt;&lt;if $gender==&quot;boy&quot; or $gender==&quot;girl&quot;&gt;&gt;
- &lt;&lt;if $gender==&quot;boy&quot;&gt;&gt;
-  &lt;&lt;set $name=&quot;Promir&quot;&gt;&gt;
- &lt;&lt;elif $gender==&quot;girl&quot;&gt;&gt;
-  &lt;&lt;set $name=&quot;Hermenfi&quot;&gt;&gt;
+  &lt;&lt;if $gender==&quot;boy&quot;&gt;&gt;
+   &lt;&lt;set $name=&quot;Promir&quot;&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;&lt;if $gender==&quot;girl&quot;&gt;&gt;
+   &lt;&lt;set $name=&quot;Hermenfi&quot;&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
  &lt;&lt;else&gt;&gt;
   很抱歉出了一个错误，请重新读取您的存档
- &lt;&lt;/if&gt;&gt;
  &lt;&lt;/if&gt;&gt;
  &lt;&lt;/timed&gt;&gt;
  &lt;&lt;/timed&gt;&gt;
