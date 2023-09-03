@@ -102,7 +102,14 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 window.addEventListener('load', function() {
   document.getElementById("music").play();
-});</script><tw-tag name="nobr" color="orange"></tw-tag><tw-tag name="aebt" color="red"></tw-tag><tw-passagedata pid="1" name="开始" tags="nobr" position="400,450" size="100,100">&lt;&lt;cacheaudio &quot;bgm-1&quot; &quot;music/bgm/Far Out - Another World (Intro) .mp3&quot;&gt;&gt;
+});
+
+if (Save.autosave.has()) {
+	Save.autosave.load();
+}
+else{
+  Engine.show("开始");
+}</script><tw-tag name="nobr" color="orange"></tw-tag><tw-tag name="aebt" color="red"></tw-tag><tw-passagedata pid="1" name="开始" tags="nobr" position="400,450" size="100,100">&lt;&lt;cacheaudio &quot;bgm-1&quot; &quot;music/bgm/Far Out - Another World (Intro) .mp3&quot;&gt;&gt;
 &lt;&lt;run Dialog.setup(&quot;注意&quot;)&gt;&gt;
 &lt;&lt;run Dialog.wiki(&quot;建议使用chrome，E-dge等浏览器打开此网页&quot;)&gt;&gt;
 &lt;&lt;run Dialog.open()&gt;&gt;
