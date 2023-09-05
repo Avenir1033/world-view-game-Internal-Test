@@ -374,6 +374,7 @@ div[id|="numberslider-body"] input::-ms-thumb {
 	animation: blink 0.7s infinite;
 }
 
+/*按钮样式*/
 button {
     display: inline-block;
     padding: 5px 10px;
@@ -387,17 +388,14 @@ button {
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease; /* 过渡效果 */
 }
-
 /* 鼠标悬停时的样式 */
 button:hover {
     background-color: #444444; /* 悬停时的背景颜色 */
 }
-
 /* 按下按钮时的样式 */
 button:active {
     background-color: #17E1E1; /* 按下时的背景颜色 */
 }
-
 /* 不可点击的按钮样式 */
 button:disabled {
     background-color: #FFFFFF; /* 不可点击时的背景颜色 */
@@ -546,10 +544,11 @@ $(window).on('beforeunload', function() {
     Save.autosave.save('Save'); 
 });
 //用于自动保存
-</script><tw-tag name="nobr" color="orange"></tw-tag><tw-tag name="aebt" color="red"></tw-tag><tw-passagedata pid="1" name="开始" tags="nobr" position="400,450" size="100,100">&lt;&lt;run Dialog.setup(&quot;注意&quot;)&gt;&gt;
-&lt;&lt;run Dialog.wiki(&quot;建议使用chrome，E-dge等浏览器打开此网页&quot;)&gt;&gt;
+</script><tw-tag name="nobr" color="orange"></tw-tag><tw-tag name="aebt" color="red"></tw-tag><tw-passagedata pid="1" name="开始" tags="nobr" position="400,450" size="100,100">&lt;&lt;waitforaudio&gt;&gt;
+&lt;&lt;run Dialog.setup(&quot;注意&quot;)&gt;&gt;
+&lt;&lt;run Dialog.wiki(&quot;建议使用chrome，E-dge等新式浏览器打开此网页(部分浏览器可能不支持本网页使用的标签/宏)&quot;)&gt;&gt;
 &lt;&lt;run Dialog.open()&gt;&gt;
-
+/*弹窗提示*/
 您好
  &lt;br/&gt;
 欢迎游玩本游戏
@@ -558,7 +557,11 @@ $(window).on('beforeunload', function() {
  &lt;br/&gt;
 祝您玩的开心
  &lt;br/&gt;
-&lt;&lt;linkreplace &quot;&#39;&#39;开始游戏&#39;&#39;&quot;&gt;&gt;
+ &lt;br/&gt;
+点击任意位置继续
+&lt;&lt;cont keypress append&gt;&gt;
+  &lt;br/&gt;
+  &lt;br/&gt;
  等一下
   &lt;&lt;timed 1s&gt;&gt;
    &lt;br/&gt;
@@ -570,7 +573,7 @@ $(window).on('beforeunload', function() {
   &lt;&lt;/button&gt;&gt;
   &lt;&lt;/timed&gt;&gt;
   &lt;&lt;/timed&gt;&gt;
-&lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;/cont&gt;&gt;
  &lt;br/&gt;
  &lt;hr/&gt;
 ^^注意事项：^^
@@ -586,16 +589,19 @@ $(window).on('beforeunload', function() {
 ^^邮箱：
 &lt;a href=&quot;mailto:kilonova7061@gmail.com?subject=来自web游戏&quot; target=&quot;_blank&quot;&gt;
  kilonova7061@gmail.com
-&lt;/a&gt;^^</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="nobr" position="175,25" size="100,100">/*菜单UI[Link]*/</tw-passagedata><tw-passagedata pid="3" name="StotyCaption" tags="nobr" position="175,100" size="100,100">/*UI栏内显示元素*/</tw-passagedata><tw-passagedata pid="4" name="调查" tags="nobr" position="400,600" size="100,100">&lt;&lt;set $gender=&quot;none&quot;&gt;&gt;
- 你认为你的名字是？
+&lt;/a&gt;^^</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="nobr" position="175,25" size="100,100">/*菜单UI[Link]*/
+[[按钮]]</tw-passagedata><tw-passagedata pid="3" name="StoryCaption" tags="nobr" position="175,100" size="100,100">/*状态栏*/
+名称:$name
+&lt;br/&gt;
+性别:$gender</tw-passagedata><tw-passagedata pid="4" name="调查" tags="nobr" position="400,600" size="100,100"> 你认为你的名字是？
  &lt;br/&gt;
- &lt;&lt;textbox &quot;$name&quot; &quot;Promir&quot;&gt;&gt;
+ &lt;&lt;textbox &quot;$name&quot; &quot;Promir or Hermenfi&quot;&gt;&gt;
  &lt;br/&gt;
 &lt;&lt;linkreplace &quot;确定&quot;&gt;&gt;
-  oh
+  哇哦
   &lt;br/&gt;
  &lt;&lt;timed 1s&gt;&gt;
-  不错的名字
+  非常不错的名字
   &lt;br/&gt;
  &lt;&lt;timed 1s&gt;&gt;
   那么请问您的性别是？
@@ -678,7 +684,7 @@ $(window).on('beforeunload', function() {
   很抱歉
  &lt;&lt;timed 1s&gt;&gt;
   &lt;br/&gt;
-  您起的名称将会被抛弃[作者懒得搞名称菜单]
+  因为作者懒得搞名称彩蛋[不排除玩家整活的可能]，所以您起的名称将会被弃用
  &lt;&lt;timed 1s&gt;&gt;
   &lt;br/&gt;
   [[真正的开始|游戏]]
@@ -939,9 +945,11 @@ $(window).on('beforeunload', function() {
 &lt;br/&gt;
 ^^作者：Avenir^^</tw-passagedata><tw-passagedata pid="14" name="StoryBanner" tags="nobr" position="25,25" size="100,100">/*顶部横幅*/
 功能栏</tw-passagedata><tw-passagedata pid="15" name="StoryDisplayTitle" tags="nobr" position="25,75" size="100,100">/*标题*/
-星火-文明意志</tw-passagedata><tw-passagedata pid="16" name="StoryInit" tags="nobr" position="175,175" size="100,100">/* 初始化片段，不执行输出 */&lt;&lt;cacheaudio &quot;bgm-1&quot; &quot;music/bgm/Far Out - Another World (Intro) .mp3&quot;&gt;&gt;/*导入音频*
-
-</tw-passagedata><tw-passagedata pid="17" name="StorySubtitle" tags="nobr" position="25,125" size="100,100">/*副标题*/
+星火-文明意志</tw-passagedata><tw-passagedata pid="16" name="StoryInit" tags="nobr" position="175,175" size="100,100">/* 初始化片段，不执行输出 */
+&lt;&lt;preload &#39;img/Photo album/GIF/logo.gif&#39; &#39;&#39;&gt;&gt;
+&lt;&lt;cacheaudio &quot;bgm-1&quot; &quot;music/bgm/Far Out - Another World (Intro) .mp3&quot;&gt;&gt;/*导入音频*/
+&lt;&lt;set $name to &quot;Promir&quot;&gt;&gt;
+&lt;&lt;set $gender to &quot;none&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="StorySubtitle" tags="nobr" position="25,125" size="100,100">/*副标题*/
 &lt;hr/&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
